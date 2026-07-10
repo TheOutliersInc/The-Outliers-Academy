@@ -26,20 +26,35 @@ if (menu) {
 
 const form = document.getElementById("registrationForm");
 
-form.addEventListener("submit", async function(e) {
+if (form) {
 
-    e.preventDefault();
+    form.addEventListener("submit", async function(e) {
 
-    const formData = new FormData(form);
+        e.preventDefault();
 
-    await fetch("https://script.google.com/macros/s/AKfycbxg31SALHy5UBKrvgI52__Q0M6ZY6ou5tu8KLv4G20SCQeUgNoTz_bIiLUmeCkyUQzK8Q/exec", {
+        const formData = new FormData(form);
 
-        method: "POST",
+        try {
 
-        body: formData
+            const response = await fetch("https://script.google.com/macros/s/AKfycbxg31SALHy5UBKrvgI52__Q0M6ZY6ou5tu8KLv4G20SCQeUgNoTz_bIiLUmeCkyUQzK8Q/exec", {
+
+                method: "POST",
+
+                body: formData
+
+            });
+
+            console.log(await response.text());
+
+            window.location.href = "pages/thank-you.html";
+
+        } catch (error) {
+
+            console.error(error);
+            alert("Submission failed.");
+
+        }
 
     });
 
-    window.location.href = "pages/thank-you.html";
-
-});
+}
