@@ -1148,249 +1148,28 @@ section{
     scroll-margin-top:100px;
 }
 
-/* ===========================
-MOBILE NAVIGATION
-=========================== */
 
-.menu-toggle{
-
-display:none;
-
-flex-direction:column;
-
-gap:6px;
-
-cursor:pointer;
-
+/* ==========================================================================
+   MOBILE NAVIGATION (Base Styles - Desktop)
+   ========================================================================== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
 }
 
-.menu-toggle span{
-
-width:30px;
-
-height:3px;
-
-background:white;
-
-border-radius:10px;
-
-transition:.3s;
-
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 10px;
+    transition: .3s;
 }
 
-@media(max-width:900px){
-
- .menu-toggle{
-
- display:flex;
-
- }
-
- nav{
-
- position:absolute;
-
- top:85px;
-
- left:0;
-
- width:100%;
-
- background:#08121f;
-
- display:none;
-
- flex-direction:column;
-
- padding:30px;
-
- gap:25px;
-
- border-top:1px solid rgba(255,255,255,.08);
-
- }
-
- nav.active{
-
- display:flex;
-
- }
-
- .hero{
-
- padding-top:160px;
-
- }
-
- .hero-grid{
-
- grid-template-columns:1fr;
-
- text-align:center;
-
- gap:50px;
-
- }
-
- .hero-left h1{
-
- font-size:48px;
-
- }
-
- .hero-left p{
-
- font-size:18px;
-
- margin:auto;
-
- }
-
- .hero-buttons{
-
- justify-content:center;
-
- flex-wrap:wrap;
-
- }
-
- .hero-stats{
-
- justify-content:center;
-
- }
-
- .problem-grid,
- .features-grid,
- .course-grid,
- .day-grid,
- .trust-grid,
- .footer{
-
- grid-template-columns:1fr;
-
- }
-
- .cta-form{
-
- flex-direction:column;
-
- align-items:center;
-
- }
-
- .cta-form input{
-
- width:100%;
-
- max-width:450px;
-
- }
-
- .cta-form button{
-
- width:100%;
-
- max-width:450px;
-
- }
-
- .section-title h2{
-
- font-size:36px;
-
- }
-
- .cta h2{
-
- font-size:40px;
-
- }
-
-
-
-    /* 1. Force the main containers to take up 100% of the screen width */
-    .container, 
-    .wrapper, 
-    main,
-    section,
-    .hero,
-    .cta-container { 
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* 2. Fix your form and input layouts so they span across the container */
-    form,
-    .cta-form,
-    .hero-form {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-    }
-
-    /* 3. Make sure the inputs and form buttons take up full width inside the form */
-    form input,
-    form .button,
-    .cta-form input,
-    .cta-form button,
-    .cta-form a {
-        width: 100% !important;
-        max-width: 400px; /* Keeps them looking good on tablets without over-stretching */
-        box-sizing: border-box !important;
-    }
-
-    /* 4. Fix row layouts that might be forcing elements to stay side-by-side */
-    .row, 
-    .grid, 
-    .flex-container {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-    }
- @media (max-width: 900px) {
-    
-    /* 1. Reset any grid or flex containers holding the feature cards */
-    .features-grid,
-    .why-cards-container,
-    .grid-container,
-    [class*="grid"], 
-    [class*="container"] {
-        display: flex !important;
-        flex-direction: column !important;
-        grid-template-columns: 1fr !important; /* Forces grids to drop to 1 column */
-        gap: 20px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* 2. Force the individual cards to take up full available width instead of a fixed size */
-    .why-card,
-    .feature-card,
-    .card,
-    div[class*="card"] {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important; /* Prevents flex items from overflowing */
-        box-sizing: border-box !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-}
-
-}
-
-
-
-/*==========================
-MOBILE STICKY CTA (Base styles)
-==========================*/
+/* ==========================================================================
+   MOBILE STICKY CTA (Base Styles - Desktop)
+   ========================================================================== */
 .mobile-cta {
     position: fixed;
     bottom: 0;
@@ -1399,12 +1178,12 @@ MOBILE STICKY CTA (Base styles)
     padding: 15px;
     background: rgba(5, 8, 22, .95);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Fix for Safari */
+    -webkit-backdrop-filter: blur(10px);
     display: none;
     z-index: 9999;
     border-top: 1px solid rgba(255, 255, 255, .08);
-    box-sizing: border-box; /* Prevents padding from breaking width: 100% */
-    padding-bottom: calc(15px + env(safe-area-inset-bottom)); /* Fix for iPhone notch/home bar */
+    box-sizing: border-box;
+    padding-bottom: calc(15px + env(safe-area-inset-bottom));
 }
 
 .mobile-cta a {
@@ -1422,47 +1201,79 @@ MOBILE STICKY CTA (Base styles)
 }
 
 .mobile-cta a:active {
-    transform: scale(0.98); /* Better mobile tactile feedback than :hover */
+    transform: scale(0.98);
 }
 
-/* Global Overflow Fixes */
+/* Global Overflow Prevention */
 html, body {
     width: 100%;
     overflow-x: hidden;
 }
 
-/*==========================
-MEDIA QUERY (Mobile & Tablet)
-==========================*/
+
+/* ==========================================================================
+   ONE SINGLE RESPONSIVE BREAKPOINT (All Mobile Fixes Go Here)
+   ========================================================================== */
 @media (max-width: 900px) {
+    
+    /* 1. Navigation Menus */
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: #08121f;
+        display: none;
+        flex-direction: column;
+        padding: 30px;
+        gap: 25px;
+        border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    /* 2. Sticky CTA Button Activator & Body Buffer */
     .mobile-cta {
         display: block;
     }
 
-    /* Prevent the sticky bar from covering content at the bottom */
     body {
         padding-bottom: calc(95px + env(safe-area-inset-bottom));
     }
 
-    .hero-text h1 {
-        font-size: 2.2rem; /* Reduced slightly from 3rem so it doesn't break aggressively on small screens */
+    /* 3. Hero Section Formatting */
+    .hero {
+        padding-top: 160px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-text h1,
+    .hero-left h1 {
+        font-size: 2.2rem;
         line-height: 1.2;
     }
 
-    .hero-image img {
-        width: 100%;
-        height: auto;
-        display: block;
+    .hero-left p {
+        font-size: 18px;
+        margin: auto;
     }
 
-    .hero-image {
-        margin-top: 30px;
-    }
-
-    /* Target the container of your hero buttons to stack them */
     .hero-buttons {
-        display: flex;         /* Ensuring flex is active to utilize column layout */
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 15px;
         width: 100%;
     }
@@ -1473,38 +1284,96 @@ MEDIA QUERY (Mobile & Tablet)
         box-sizing: border-box;
     }
 
-    .faq-card {
-        padding: 22px;
-    }
-
-    .curriculum {
-        padding-top: 80px;
-    }
-
-    .why-card,
-    .faq-item,
-    .cta-card {
+    .hero-image img {
         width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .faq-item {
         height: auto;
-        min-height: unset;
-        padding: 20px;
+        display: block;
     }
 
-    .cta-container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
+    .hero-stats {
+        justify-content: center;
     }
 
-    .cta-content,
-    .cta-form {
-        width: 100%;
-        box-sizing: border-box;
+    /* 4. Layout Reset: Force Layout Containers to be Full Screen Width */
+    .container,
+    .wrapper,
+    main,
+    section,
+    .hero,
+    .cta-container,
+    .why-cards-container,
+    .grid-container,
+    [class*="container"],
+    [class*="wrapper"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 5. Grid Stripper: Drop all multi-column rows into 1 neat column */
+    .row,
+    .grid,
+    .flex-container,
+    .problem-grid,
+    .features-grid,
+    .course-grid,
+    .day-grid,
+    .trust-grid,
+    [class*="grid"] {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 6. Card Optimization: Prevents elements from sticking off-screen */
+    .why-card,
+    .feature-card,
+    .card,
+    .faq-item,
+    .cta-card,
+    div[class*="card"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        height: auto !important;
+    }
+
+    /* 7. Forms and Inputs Adjustments */
+    form,
+    .cta-form,
+    .hero-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    form input,
+    form .button,
+    .cta-form input,
+    .cta-form button,
+    .cta-form a {
+        width: 100% !important;
+        max-width: 450px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 8. Typography Scaling */
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .cta h2 {
+        font-size: 36px;
     }
 }
