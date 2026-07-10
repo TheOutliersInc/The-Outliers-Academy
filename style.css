@@ -1310,139 +1310,122 @@ font-size:40px;
 }
 
 /*==========================
-MOBILE STICKY CTA
+MOBILE STICKY CTA (Base styles)
 ==========================*/
-
-.mobile-cta{
-
-position:fixed;
-
-bottom:0;
-
-left:0;
-
-width:100%;
-
-padding:15px;
-
-background:rgba(5,8,22,.95);
-
-backdrop-filter:blur(10px);
-
-display:none;
-
-z-index:9999;
-
-border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-.mobile-cta a{
-
-display:block;
-
-text-align:center;
-
-padding:18px;
-
-background:linear-gradient(90deg,#8B5CF6,#3B82F6);
-
-color:white;
-
-text-decoration:none;
-
-font-weight:700;
-
-font-size:18px;
-
-border-radius:50px;
-
-transition:.3s;
-
-}
-
-.mobile-cta a:hover{
-
-transform:translateY(-3px);
-
-}
-
-@media(max-width:900px){
-
-.mobile-cta{
-
-display:block;
-
-
-}
-
-/* Prevent the sticky bar from covering the footer/form */
-body{
-
-padding-bottom:95px;
-
-}
-
-.hero-text h1{
-    font-size:3rem;
-    line-height:1.1;
-}
-.hero-image img{
-    width:100%;
-    height:auto;
-}
-
-.hero-image{
-    margin-top:30px;
-}
-
-.hero-buttons{
-    flex-direction:column;
-    gap:15px;
-}
-
-.hero-buttons a{
-    width:100%;
-    text-align:center;
-}
-
-.faq-card{
-    padding:22px;
-}
-
-.curriculum{
-    padding-top:80px;
-}
-
-.why-card,
-.faq-item,
-.cta-card {
+.mobile-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    padding: 15px;
+    background: rgba(5, 8, 22, .95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Fix for Safari */
+    display: none;
+    z-index: 9999;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    box-sizing: border-box; /* Prevents padding from breaking width: 100% */
+    padding-bottom: calc(15px + env(safe-area-inset-bottom)); /* Fix for iPhone notch/home bar */
 }
 
-.faq-item{
-    height:auto;
-    min-height:unset;
-    padding:20px;
+.mobile-cta a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    background: linear-gradient(90deg, #8B5CF6, #3B82F6);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: transform .3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
-.cta-container{
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    gap:30px;
+.mobile-cta a:active {
+    transform: scale(0.98); /* Better mobile tactile feedback than :hover */
 }
 
-.cta-content,
-.cta-form{
-    width:100%;
-}
-
-}
-
-html,
-body {
+/* Global Overflow Fixes */
+html, body {
+    width: 100%;
     overflow-x: hidden;
+}
+
+/*==========================
+MEDIA QUERY (Mobile & Tablet)
+==========================*/
+@media (max-width: 900px) {
+    .mobile-cta {
+        display: block;
+    }
+
+    /* Prevent the sticky bar from covering content at the bottom */
+    body {
+        padding-bottom: calc(95px + env(safe-area-inset-bottom));
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem; /* Reduced slightly from 3rem so it doesn't break aggressively on small screens */
+        line-height: 1.2;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    /* Target the container of your hero buttons to stack them */
+    .hero-buttons {
+        display: flex;         /* Ensuring flex is active to utilize column layout */
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .faq-card {
+        padding: 22px;
+    }
+
+    .curriculum {
+        padding-top: 80px;
+    }
+
+    .why-card,
+    .faq-item,
+    .cta-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .faq-item {
+        height: auto;
+        min-height: unset;
+        padding: 20px;
+    }
+
+    .cta-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .cta-content,
+    .cta-form {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
