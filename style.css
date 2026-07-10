@@ -1384,7 +1384,7 @@ padding-bottom:95px;
 }
 
 .hero-text h1{
-    font-size:52px;
+    font-size:3rem;
     line-height:1.1;
 }
 .hero-image img{
@@ -1414,6 +1414,35 @@ padding-bottom:95px;
     padding-top:80px;
 }
 
+.why-card,
+.faq-item,
+.cta-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
+.faq-item{
+    height:auto;
+    min-height:unset;
+    padding:20px;
+}
 
+.cta-container{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    gap:30px;
+}
+
+.cta-content,
+.cta-form{
+    width:100%;
+}
+
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
