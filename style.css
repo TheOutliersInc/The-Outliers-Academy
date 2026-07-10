@@ -1214,7 +1214,7 @@ html, body {
 /* ==========================================================================
    ONE SINGLE RESPONSIVE BREAKPOINT (All Mobile Fixes Go Here)
    ========================================================================== */
-@media (max-width: 1500px) {
+@media (max-width: 768px) {
     
     /* 1. Navigation Menus */
     .menu-toggle {
@@ -1376,4 +1376,114 @@ html, body {
     .cta h2 {
         font-size: 36px;
     }
+}
+
+
+
+
+/* ===========================
+   THANK YOU PAGE
+=========================== */
+
+.thank-you{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+    max-width:800px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.thank-logo{
+    width:90px;
+    margin-bottom:25px;
+}
+
+.success-icon{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.success-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:999px;
+    background:rgba(139,92,246,.15);
+    border:1px solid rgba(139,92,246,.35);
+    color:#fff;
+    margin-bottom:25px;
+}
+
+.thank-you h1{
+    font-size:4rem;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.thank-text{
+    font-size:1.15rem;
+    color:#cbd5e1;
+    line-height:1.8;
+    max-width:650px;
+    margin-bottom:40px;
+}
+
+.next-step-card{
+    width:100%;
+    background:#13182d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:35px;
+    margin-bottom:30px;
+}
+
+.next-step-card h2{
+    color:#fff;
+    margin-bottom:18px;
+}
+
+.next-step-card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.secondary-btn{
+    display:inline-block;
+    margin-top:20px;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.2);
+    padding:15px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:#fff;
+    color:#111827;
+}
+
+@media(max-width:768px){
+
+    .thank-you{
+        padding:90px 20px;
+    }
+
+    .thank-you h1{
+        font-size:2.7rem;
+    }
+
+    .thank-text{
+        font-size:1rem;
+    }
+
+    .next-step-card{
+        padding:25px;
+    }
+
 }
