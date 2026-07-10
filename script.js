@@ -18,11 +18,11 @@ const menu = document.querySelector(".menu-toggle");
 
 const nav = document.querySelector("nav");
 
-menu.addEventListener("click",()=>{
-
-nav.classList.toggle("active");
-
-});
+if (menu) {
+    menu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+}
 
 const form = document.getElementById("registrationForm");
 
