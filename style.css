@@ -23,21 +23,15 @@ margin:auto;
 }
 
 .logo-container {
-  display: flex;       /* Aligns the logo and text side-by-side */
-  align-items: center; /* Vertically centers the logo and text so they line up perfectly */
-  gap: 12px;           /* Puts a clean 12px space between the logo and the text */
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .site-logo {
-  height: 40px;        /* Adjust this to make your logo the perfect size */
-  width: auto;         /* Keeps your logo from stretching weirdly */
+  height: 30px; /* Adjust this to make your logo the size you want */
+  width: auto;
 }
-
-.site-name {
-  font-weight: bold;   /* Makes your site name stand out */
-  font-size: 1.2rem;   /* Adjust the font size as needed */
-}
-
 
 header{
 
