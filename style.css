@@ -1354,6 +1354,36 @@ transition:.3s;
         flex-direction: column !important;
         width: 100% !important;
     }
+ @media (max-width: 900px) {
+    
+    /* 1. Reset any grid or flex containers holding the feature cards */
+    .features-grid,
+    .why-cards-container,
+    .grid-container,
+    [class*="grid"], 
+    [class*="container"] {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important; /* Forces grids to drop to 1 column */
+        gap: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Force the individual cards to take up full available width instead of a fixed size */
+    .why-card,
+    .feature-card,
+    .card,
+    div[class*="card"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important; /* Prevents flex items from overflowing */
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
 }
 
 
