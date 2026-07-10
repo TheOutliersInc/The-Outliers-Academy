@@ -1487,3 +1487,36 @@ html, body {
     }
 
 }
+
+.next-steps{
+    width:100%;
+    margin-bottom:35px;
+    text-align:left;
+}
+
+.next-steps h2{
+    color:#fff;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.step{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    background:#13182d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:15px;
+}
+
+.step span{
+    font-size:1.5rem;
+}
+
+.step p{
+    color:#cbd5e1;
+    line-height:1.6;
+    margin:0;
+}
