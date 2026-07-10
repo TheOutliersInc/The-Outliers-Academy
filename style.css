@@ -1307,6 +1307,55 @@ font-size:40px;
 
 }
 
+@media (max-width: 900px) {
+
+    /* 1. Force the main containers to take up 100% of the screen width */
+    .container, 
+    .wrapper, 
+    main,
+    section,
+    .hero,
+    .cta-container { 
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Fix your form and input layouts so they span across the container */
+    form,
+    .cta-form,
+    .hero-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    /* 3. Make sure the inputs and form buttons take up full width inside the form */
+    form input,
+    form .button,
+    .cta-form input,
+    .cta-form button,
+    .cta-form a {
+        width: 100% !important;
+        max-width: 400px; /* Keeps them looking good on tablets without over-stretching */
+        box-sizing: border-box !important;
+    }
+
+    /* 4. Fix row layouts that might be forcing elements to stay side-by-side */
+    .row, 
+    .grid, 
+    .flex-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+}
+
 }
 
 /*==========================
