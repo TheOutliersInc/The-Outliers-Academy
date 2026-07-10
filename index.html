@@ -576,29 +576,23 @@ Reserve Seat
 
             </p>
 
-           <form class="cta-form" id="registrationForm" action="pages/thank-you.html">
+           <form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Your Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="bb1724f3-db17-44c3-8be2-532b89670619">
+    
+    <!-- Your Custom Redirect Page -->
+    <input type="hidden" name="thank-you.html" value="https://theoutliersinc.github.io/The-Outliers-Academy/thank-you.html">
 
+    <!-- Confirmation Email Sender Details -->
+    <input type="hidden" name="from_name" value="The Outliers Academy">
+    <input type="hidden" name="subject" value="Registration Confirmed! 🎉">
 
-<input
-    type="text"
-    id="name"
-    name="name"
-    placeholder="Enter your full name"
-    required>
+    <!-- Anti-Spam Botcheck (Hidden from users) -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-<input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="Enter your email address"
-    required>
-
-<input
-    type="tel"
-    id="phone"
-    name="phone"
-    placeholder="Enter your phone number"
-    required>
+    <!-- User Input Fields -->
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email Address" required>
 
     <button type="submit">
         Reserve My Free Seat 🚀
