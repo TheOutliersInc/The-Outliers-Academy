@@ -22,16 +22,6 @@ margin:auto;
 
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.site-logo {
-  height: 100px; /* Adjust this to make your logo the size you want */
-  width: auto;
-}
 
 header{
 
@@ -1383,6 +1373,7 @@ transform:translateY(-3px);
 
 display:block;
 
+
 }
 
 /* Prevent the sticky bar from covering the footer/form */
@@ -1392,4 +1383,37 @@ padding-bottom:95px;
 
 }
 
+.hero-text h1{
+    font-size:52px;
+    line-height:1.1;
 }
+.hero-image img{
+    width:100%;
+    height:auto;
+}
+
+.hero-image{
+    margin-top:30px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    gap:15px;
+}
+
+.hero-buttons a{
+    width:100%;
+    text-align:center;
+}
+
+.faq-card{
+    padding:22px;
+}
+
+.curriculum{
+    padding-top:80px;
+}
+
+}
+
+
