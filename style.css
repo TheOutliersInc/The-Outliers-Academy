@@ -1524,3 +1524,44 @@ html, body {
     line-height:1.6;
     margin:0;
 }
+
+/* Fixes the form container width and centers it */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;               /* Puts clean vertical spacing between inputs */
+    width: 100%;
+    max-width: 450px;        /* Limits how wide the form gets so it looks premium */
+    margin: 30px auto;       /* Centers the entire form block on the page */
+}
+
+/* Makes your text boxes stretch out fully to match the form container */
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 12px 16px;      /* Gives the text inside breathing room */
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent input bg */
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;  /* Ensures padding doesn't break the layout */
+}
+
+/* Makes your registration button match the width and look clickable */
+form button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #6366f1; /* Replace this with your purple theme hex code if different */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #4f46e5; /* Slightly darker shade on hover */
+}
