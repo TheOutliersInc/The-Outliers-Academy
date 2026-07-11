@@ -30,17 +30,22 @@ if (menuToggle && nav) {
 }
 
 // ===============================
-// Prevent Double Submission
+// Prevent Double Submission (FormSubmit Compatible)
 // ===============================
-
 const form = document.querySelector("form");
 
 if (form) {
     form.addEventListener("submit", () => {
         const submitButton = form.querySelector('button[type="submit"]');
-
-        submitButton.disabled = true;
-        submitButton.textContent = "Registering...";
+        if (submitButton) {
+            // Use setTimeout to wait 50 milliseconds!
+            // This gives the browser time to launch the form submission data out 
+            // to FormSubmit before we disable the button element.
+            setTimeout(() => {
+                submitButton.disabled = true;
+                submitButton.textContent = "Registering...";
+            }, 50);
+        }
     });
 }
 
