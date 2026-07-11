@@ -626,6 +626,10 @@ form button[type="submit"]:hover {
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #why-us,
 #curriculum,
 #faq,
