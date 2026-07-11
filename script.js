@@ -1,68 +1,55 @@
-// FAQ
+// ===============================
+// FAQ Accordion
+// ===============================
 
-const faq = document.querySelectorAll(".faq-item");
+const faqItems = document.querySelectorAll(".faq-item");
 
-faq.forEach(item=>{
+faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
 
-item.querySelector(".faq-question").addEventListener("click",()=>{
-
-item.classList.toggle("active");
-
+    question.addEventListener("click", () => {
+        item.classList.toggle("active");
+    });
 });
 
-});
 
-// Mobile Menu
+// ===============================
+// Mobile Navigation
+// ===============================
 
-// Mobile Menu Fix
-const menu = document.querySelector(".menu-toggle");
+const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
 const navLinks = document.querySelectorAll("nav a");
 
-if (menu && nav) {
-    // Toggles menu when clicking the hamburger icon
-    menu.addEventListener("click", () => {
+if (menuToggle && nav) {
+
+    menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
     });
 
-    // Automatically closes the menu drawer when any link inside is clicked!
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             nav.classList.remove("active");
         });
     });
+
 }
 
-const form = document.getElementById("registrationForm");
+
+// ===============================
+// Prevent Double Form Submission
+// ===============================
+
+const form = document.querySelector("form");
 
 if (form) {
 
-    form.addEventListener("submit", async function(e) {
+    form.addEventListener("submit", () => {
 
-        e.preventDefault();
+        const submitButton = form.querySelector('button[type="submit"]');
 
-        const formData = new FormData(form);
-
-        try {
-
-            const response = await fetch("https://script.google.com/macros/s/AKfycbxg31SALHy5UBKrvgI52__Q0M6ZY6ou5tu8KLv4G20SCQeUgNoTz_bIiLUmeCkyUQzK8Q/exec", {
-
-                method: "POST",
-
-                body: formData
-
-            });
-
-            console.log(await response.text());
-
-            window.location.href = "pages/thank-you.html";
-
-        } catch (error) {
-
-            console.error(error);
-            alert("Submission failed.");
-
-        }
+        submitButton.disabled = true;
+        submitButton.textContent = "Registering...";
 
     });
 
