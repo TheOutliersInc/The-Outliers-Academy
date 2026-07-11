@@ -1565,3 +1565,58 @@ html, body {
 .form button[type="submit"]:hover {
     background-color: #4f46e5; /* Slightly darker shade on hover */
 }
+
+/* ==========================================================================
+   MOBILE OPTIMIZATION: STEP 1 (Header & Navigation)
+   ========================================================================== */
+
+/* Hide the hamburger button by default on desktop computers */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* This media query activates only on mobile screens (less than 768px wide) */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Shows the hamburger button on mobile phones */
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hides the menu panel off-screen to the right by default */
+        width: 70%;
+        height: 100vh;
+        background: rgba(5, 8, 22, 0.98); /* Solid dark background matching your theme */
+        backdrop-filter: blur(20px);
+        display: flex;
+        flex-direction: column; /* Stacks links vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: right 0.4s ease; /* Makes the panel slide in smoothly */
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+    }
+
+    /* When the JavaScript adds the '.active' class, slide the menu into view */
+    header nav.active {
+        right: 0;
+    }
+
+    header nav a {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Styles the call-to-action button to look uniform inside the mobile menu drawer */
+    header nav .nav-btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
