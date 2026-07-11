@@ -1526,7 +1526,7 @@ html, body {
 }
 
 /* Fixes the form container width and centers it */
-form {
+.form {
     display: flex;
     flex-direction: column;
     gap: 15px;               /* Puts clean vertical spacing between inputs */
@@ -1536,8 +1536,8 @@ form {
 }
 
 /* Makes your text boxes stretch out fully to match the form container */
-form input[type="text"],
-form input[type="email"] {
+.form input[type="text"],
+.form input[type="email"] {
     width: 100%;
     padding: 12px 16px;      /* Gives the text inside breathing room */
     border-radius: 6px;
@@ -1549,7 +1549,7 @@ form input[type="email"] {
 }
 
 /* Makes your registration button match the width and look clickable */
-form button[type="submit"] {
+.form button[type="submit"] {
     width: 100%;
     padding: 14px;
     background-color: #6366f1; /* Replace this with your purple theme hex code if different */
@@ -1562,6 +1562,6 @@ form button[type="submit"] {
     transition: background-color 0.2s ease;
 }
 
-form button[type="submit"]:hover {
+.form button[type="submit"]:hover {
     background-color: #4f46e5; /* Slightly darker shade on hover */
 }
