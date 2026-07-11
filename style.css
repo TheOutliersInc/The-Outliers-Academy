@@ -625,3 +625,11 @@ form button[type="submit"]:hover {
         padding:16px;
     }
 }
+
+#why-us,
+#curriculum,
+#faq,
+#register,
+#contact {
+    scroll-margin-top: 100px;
+}
