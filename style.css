@@ -449,3 +449,179 @@ form button[type="submit"]:hover {
         font-weight: 600;
     }
 }
+
+/* ==========================================================
+   THANK YOU PAGE
+========================================================== */
+
+.thank-you {
+    min-height: 100vh;
+    padding: 140px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.thank-logo {
+    width: 120px;
+    margin-bottom: 25px;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    animation: pop 0.6s ease;
+}
+
+.success-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: rgba(34,197,94,.12);
+    border: 1px solid rgba(34,197,94,.3);
+    color: #4ade80;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.thank-you h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.thank-text {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 40px;
+}
+
+.next-step-card {
+    width: 100%;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(99,102,241,.18);
+    border-radius: 18px;
+    padding: 40px;
+    margin-bottom: 35px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.35);
+}
+
+.next-step-card h2 {
+    margin-bottom: 18px;
+    color: white;
+}
+
+.next-step-card p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.next-steps {
+    width: 100%;
+    background: rgba(255,255,255,.02);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 18px;
+    padding: 35px;
+    margin-bottom: 35px;
+}
+
+.next-steps h2 {
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.step span {
+    font-size: 1.4rem;
+    min-width: 30px;
+}
+
+.step p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background: linear-gradient(135deg,#25D366,#1EBE5D);
+    color: white;
+    text-decoration: none;
+    padding: 15px 34px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .3s;
+    box-shadow: 0 8px 25px rgba(37,211,102,.35);
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(37,211,102,.45);
+}
+
+.thank-you .secondary-btn {
+    margin-top: 10px;
+}
+
+@keyframes pop {
+    0%{
+        transform:scale(.4);
+        opacity:0;
+    }
+    70%{
+        transform:scale(1.15);
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@media (max-width:768px){
+
+    .thank-you{
+        padding:110px 20px 60px;
+    }
+
+    .thank-logo{
+        width:90px;
+    }
+
+    .thank-you h1{
+        font-size:2.2rem;
+    }
+
+    .thank-text{
+        font-size:1rem;
+    }
+
+    .next-step-card,
+    .next-steps{
+        padding:25px;
+    }
+
+    .step{
+        align-items:flex-start;
+    }
+
+    .whatsapp-btn{
+        width:100%;
+        padding:16px;
+    }
+}
