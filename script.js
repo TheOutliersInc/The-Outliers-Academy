@@ -14,13 +14,22 @@ item.classList.toggle("active");
 
 // Mobile Menu
 
+// Mobile Menu Fix
 const menu = document.querySelector(".menu-toggle");
-
 const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll("nav a");
 
-if (menu) {
+if (menu && nav) {
+    // Toggles menu when clicking the hamburger icon
     menu.addEventListener("click", () => {
         nav.classList.toggle("active");
+    });
+
+    // Automatically closes the menu drawer when any link inside is clicked!
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
     });
 }
 
