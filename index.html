@@ -576,29 +576,27 @@ Reserve Seat
 
             </p>
 
-           <form class="cta-form" id="registrationForm" action="pages/thank-you.html">
+          <form action="https://formsubmit.co/arogundaderidwan38@gmail.com" method="POST">
+    
+    <!-- 1. The Custom Redirect (Your Thank You Page) -->
+    <input type="hidden" name="_next" value="https://theoutliersinc.github.io/The-Outliers-Academy/thank-you.html">
 
+    <!-- 2. The Confirmation Email (Autoresponder) Toggle -->
+    <!-- This tells FormSubmit to send a stylized confirmation copy to the user -->
+    <input type="hidden" name="_autoresponse" value="Thank you for registering at The Outliers Academy! We have received your submission. Make sure to click on the WhatsApp link in the thank you page to join the waiting list.">
 
-<input
-    type="text"
-    id="name"
-    name="name"
-    placeholder="Enter your full name"
-    required>
+    <!-- 3. Optional Formatting Controls -->
+    <input type="hidden" name="_subject" value="The Outliers Registration Alert!"> <!-- Subject for YOUR email notification -->
+    <input type="text" name="_honey" style="display:none"> <!-- Anti-spam honey pot -->
 
-<input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="Enter your email address"
-    required>
-
-<input
-    type="tel"
-    id="phone"
-    name="phone"
-    placeholder="Enter your phone number"
-    required>
+    <!-- 4. User Input Fields -->
+    <div class="input-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    
+    <div class="input-group">
+        <input type="email" name="email" placeholder="Your Email Address" required>
+    </div>
 
     <button type="submit">
         Reserve My Free Seat 🚀

@@ -16,6 +16,26 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
+    
+    <!-- Custom styling to ensure the WhatsApp button matches your theme perfectly -->
+    <style>
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366; /* WhatsApp Green */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 1rem;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .whatsapp-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,47 +66,48 @@
 
         <div class="next-step-card">
 
-    <h2>Registration Confirmed ✅</h2>
+            <h2>Registration Confirmed ✅</h2>
 
-    <p>
+            <p>
+                Thank you for registering for our
+                <strong>FREE 2-Day Data Analysis Bootcamp.</strong>
+                <br><br>
+                A confirmation email has been sent to your inbox.
+                <br><br>
+                It contains everything you need, including the bootcamp details and the next steps.
+            </p>
+            
+            <!-- 🔽 STEP 1: PASTE YOUR WHATSAPP LINK BELOW 🔽 -->
+            <a href="https://chat.whatsapp.com/YOUR-ACTUAL-WHATSAPP-LINK-HERE" class="whatsapp-btn" target="_blank">
+                💬 Join Our WhatsApp Group
+            </a>
 
-        Thank you for registering for our
-        <strong>FREE 2-Day Data Analysis Bootcamp.</strong>
+        </div>
+        
+        <div class="next-steps">
 
-        <br><br>
+            <h2>What Happens Next?</h2>
 
-        A confirmation email has been sent to your inbox.
+            <div class="step">
+                <span>📧</span>
+                <p>Check your email for your registration confirmation.</p>
+            </div>
 
-        <br><br>
+            <div class="step">
+                <span>📅</span>
+                <p>You'll receive the bootcamp date, time and joining instructions.</p>
+            </div>
 
-        It contains everything you need, including the bootcamp details and the next steps.
+            <div class="step">
+                <span>🚀</span>
+                <p>Get ready to begin your journey into Data Analysis with The Outliers Academy.</p>
+            </div>
 
-    </p>
-
-</div>
-<div class="next-steps">
-
-    <h2>What Happens Next?</h2>
-
-    <div class="step">
-        <span>📧</span>
-        <p>Check your email for your registration confirmation.</p>
-    </div>
-
-    <div class="step">
-        <span>📅</span>
-        <p>You'll receive the bootcamp date, time and joining instructions.</p>
-    </div>
-
-    <div class="step">
-        <span>🚀</span>
-        <p>Get ready to begin your journey into Data Analysis with The Outliers Academy.</p>
-    </div>
-
-</div>
+        </div>
+        
         <a href="../index.html" class="secondary-btn">
-    Return to Homepage
-</a>
+            Return to Homepage
+        </a>
 
     </section>
 
