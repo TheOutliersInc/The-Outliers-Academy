@@ -32,15 +32,15 @@ if (menuToggle && nav) {
 // ===============================
 // Prevent Double Submission (FormSubmit Compatible)
 // ===============================
+// ===============================
+// Prevent Double Submission (Web3Forms Compatible)
+// ===============================
 const form = document.querySelector("form");
 
 if (form) {
     form.addEventListener("submit", () => {
         const submitButton = form.querySelector('button[type="submit"]');
         if (submitButton) {
-            // Use setTimeout to wait 50 milliseconds!
-            // This gives the browser time to launch the form submission data out 
-            // to FormSubmit before we disable the button element.
             setTimeout(() => {
                 submitButton.disabled = true;
                 submitButton.textContent = "Registering...";
