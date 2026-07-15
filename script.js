@@ -29,9 +29,7 @@ if (menuToggle && nav) {
     });
 }
 
-// ===============================
-// Prevent Double Submission (FormSubmit Compatible)
-// ===============================
+
 // ===============================
 // Prevent Double Submission (Web3Forms Compatible)
 // ===============================
